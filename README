@@ -1,0 +1,39 @@
+HOW TO PERSONALIZE THIS SITE
+=============================
+
+This is now the "Champion" theme — a classy black/gold/burgundy
+"championship night" look that blends both basketball AND boxing
+(since he loves both), with a championship belt you unbuckle as
+the special interactive moment instead of a candle or a ball.
+
+It's 3 files:
+- index.html  → the text/content
+- style.css   → the colors/styling
+- script.js   → the animations
+
+1. ADD HIS NAME AND DATE
+   Open index.html and replace:
+   [His Name]        → his first name
+   [Birthday Date]    → e.g. "June 27th, 2026"
+   [His Full Name]    → for the footer
+   [Write your message here...] → your personal note
+
+2. ADD HIS PHOTOS (4 spots in the gallery)
+   Each photo has a line like this in index.html:
+     <div class="photo-img placeholder" data-label="Photo 1"></div>
+
+   Replace it with:
+     <div class="photo-img" style="background-image:url('YOUR_IMAGE_LINK_HERE')"></div>
+
+   Easiest way to get an image link:
+   - Upload the photo to https://imgbb.com (free, no account needed)
+   - Copy the "direct link" it gives you
+   - Paste it into the style="background-image:url('...')" part
+
+3. PREVIEW
+   Just double-click index.html and it opens in your browser.
+   Once you're happy, you can upload all 3 files to something like
+   Netlify Drop (netlify.com/drop) to get a shareable link.
+
+That's it — same elegant feel as the one your boyfriend made you,
+now with a championship-belt twist that covers both sports he loves. 🏆
