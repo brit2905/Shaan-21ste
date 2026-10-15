@@ -116,6 +116,48 @@ const ks = document.createElement('style');
 ks.textContent = '@keyframes hUp{0%{opacity:1;transform:translate(-50%,-50%) scale(1);}100%{opacity:0;transform:translate(-50%,-240%) scale(1.7);}}';
 document.head.appendChild(ks);
 
+/* PRESS START — game screen to message reveal */
+const pressStart = document.getElementById('pressStart');
+const gameScreen = document.getElementById('gameScreen');
+const msgCard    = document.getElementById('msgCard');
+let started = false;
+
+function startGame() {
+    if (started) return;
+    started = true;
+
+    /* button flash feedback */
+    pressStart.textContent = '▶ LOADING...';
+    pressStart.style.animation = 'none';
+
+    /* glitch flicker on the screen */
+    let flickers = 0;
+    const flicker = setInterval(() => {
+        gameScreen.style.opacity = flickers % 2 === 0 ? '0.3' : '1';
+        flickers++;
+        if (flickers > 7) {
+            clearInterval(flicker);
+            /* screen turns off like a CRT */
+            gameScreen.classList.add('off');
+            setTimeout(() => {
+                gameScreen.style.display = 'none';
+                /* burst confetti as message loads in */
+                burst(document.querySelector('.msg-sec'), 90);
+                setTimeout(() => {
+                    msgCard.classList.add('on');
+                    /* second wave */
+                    setTimeout(() => burst(document.querySelector('.msg-sec'), 60), 400);
+                }, 200);
+            }, 500);
+        }
+    }, 80);
+}
+
+if (pressStart) {
+    pressStart.addEventListener('click', startGame);
+    pressStart.addEventListener('touchend', (e) => { e.preventDefault(); startGame(); }, { passive: false });
+}
+
 /* CARD FLIP — tap toggles on mobile, hover handles desktop via CSS */
 document.querySelectorAll('.photo-card').forEach((card) => {
     /* tap to flip on mobile */

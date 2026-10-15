@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Happy 21st Champion 🏆</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Poppins:wght@300;400;500;600&family=Press+Start+2P&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -32,7 +32,6 @@
     <p class="sec-tag">the main event</p>
     <h2 class="sec-title">Claim Your Title</h2>
     <p class="belt-hint">Undo the belt to reveal your birthday wish</p>
-
     <div class="belt-wrap" id="beltWrap">
         <div class="belt-strap left"></div>
         <div class="belt-strap right"></div>
@@ -46,7 +45,6 @@
             <span class="buckle-star bl">✦</span><span class="buckle-star br">✦</span>
         </div>
     </div>
-
     <div class="wish-box" id="wishBox">
         <span class="stars">✦ ✦ ✦</span>
         <h3>Undisputed. Undefeated. 21. 🏆</h3>
@@ -59,10 +57,8 @@
     <p class="sec-tag">the highlight reel</p>
     <h2 class="sec-title">21 Years of My Champion</h2>
     <p class="flip-hint">Tap or hover a photo to flip it ✦</p>
-
     <div class="gallery-grid">
 
-        <!-- CARD 1 -->
         <div class="photo-card c1 reveal">
             <div class="card-inner">
                 <div class="card-front">
@@ -82,7 +78,6 @@
             </div>
         </div>
 
-        <!-- CARD 2 -->
         <div class="photo-card c2 reveal">
             <div class="card-inner">
                 <div class="card-front">
@@ -102,7 +97,6 @@
             </div>
         </div>
 
-        <!-- CARD 3 -->
         <div class="photo-card c3 reveal">
             <div class="card-inner">
                 <div class="card-front">
@@ -122,7 +116,6 @@
             </div>
         </div>
 
-        <!-- CARD 4 -->
         <div class="photo-card c4 reveal">
             <div class="card-inner">
                 <div class="card-front">
@@ -147,41 +140,50 @@
 
 <!-- ───────── MESSAGE ───────── -->
 <section class="msg-sec sec-wrap">
-    <div class="msg-card reveal">
+    <p class="sec-tag" style="color:var(--gold-light);">a little note from your one and only ♥️</p>
+    <h2 class="sec-title" style="color:#fff;">Your Special Message</h2>
 
-        <!-- top corner ornaments -->
+    <!-- GAME SCREEN — PRESS START -->
+    <div class="game-screen" id="gameScreen">
+        <div class="screen-scanlines"></div>
+        <div class="screen-glow"></div>
+        <p class="game-player">— PLAYER 1 —</p>
+        <h3 class="game-title">SHAAN WADE<br/>BOSMAN</h3>
+        <div class="game-badge">⭐ CHAMPION ⭐</div>
+        <div class="game-stats">
+            <div class="stat"><span class="stat-label">AGE</span><span class="stat-val">21</span></div>
+            <div class="stat"><span class="stat-label">LEVEL</span><span class="stat-val">MAX</span></div>
+            <div class="stat"><span class="stat-label">STATUS</span><span class="stat-val">GOAT</span></div>
+        </div>
+        <button class="press-start" id="pressStart">▶ PRESS START</button>
+        <p class="screen-hint">tap to unlock your message</p>
+    </div>
+
+    <!-- MESSAGE CARD — revealed after press start -->
+    <div class="msg-card" id="msgCard">
         <span class="corner tl">✦</span>
         <span class="corner tr">✦</span>
         <span class="corner bl">✦</span>
         <span class="corner br">✦</span>
 
-        <!-- wax seal -->
         <div class="seal">
             <span class="seal-num">21</span>
             <span class="seal-ring"></span>
         </div>
 
-        <p class="from-txt">a little note from your one and only♥️</p>
-
-        <!-- gold divider -->
+        <p class="from-txt">a little note from your one and only ♥️</p>
         <div class="divider"><span></span><span class="div-icon">✦</span><span></span></div>
-
         <h2 class="msg-h">Happy 21st Birthday,<br/><em>my Champion</em> 🥊</h2>
-
-        <!-- opening quote mark -->
         <div class="open-quote">"</div>
 
         <p class="msg-p">Happy 21st, Shaan Wade Bosman — yes, 21 years of being dramatic in the ring, dramatic on gaming, and somehow still the most stubborn person I know. I've watched you take hits and keep your hands up, miss shots and go again like nothing happened, and somehow turn "I'll just train for a few minutes" into an hour. That's not luck, that's just who you are.</p>
         <p class="msg-p">21 is a big one — here's to a whole new chapter, going hard at everything you do, and me right next to you cheering you on, always. I love you, with all my heart.</p>
 
-        <!-- gold divider -->
         <div class="divider"><span></span><span class="div-icon">🏆</span><span></span></div>
-
         <div class="sig-wrap">
             <p class="sig-line">Your biggest fan, forever and always</p>
             <p class="sig-name">Britney 💋</p>
         </div>
-
     </div>
 </section>
 
